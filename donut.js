@@ -4,8 +4,8 @@ function renderDonut() {
     let A = 0;
     let B = 0;
     const K2 = 5;
-    const K3 = 240;  // Reduzido para ajustar ao tamanho da tela
-    const K4 = 90;  // Ajuste do fator de projeção
+    const K3 = 240;  
+    const K4 = 90;  
     const R1 = 1.5;
     const R2 = 2.5;
   
@@ -15,8 +15,8 @@ function renderDonut() {
       let screen = Array(K3 * K3).fill(' ');
       let zBuffer = Array(K3 * K3).fill(0);
       
-      for (let theta = 0; theta < Math.PI * 2; theta += 0.07) {  // Ajustado para melhor renderização
-        for (let phi = 0; phi < Math.PI * 2; phi += 0.02) {  // Ajustado para maior densidade
+      for (let theta = 0; theta < Math.PI * 2; theta += 0.06) { 
+        for (let phi = 0; phi < Math.PI * 2; phi += 0.02) { 
           const cosTheta = Math.cos(theta);
           const sinTheta = Math.sin(theta);
           const cosPhi = Math.cos(phi);
@@ -62,4 +62,4 @@ function renderDonut() {
     renderFrame();
   }
   
-  renderDonut();
+renderDonut();
